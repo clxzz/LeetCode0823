@@ -7,13 +7,9 @@ long Max(long a, long b)
 	return a>b?a:b;
 }
 
-int main()
+void sleepClass(vector<long>& a, vector<int>& t, int n, int k)
 {
-	long n=6,k=5;
-
-		vector<long> a={1,3,5,2,5,4};
-		vector<int> t={1,1,0,1,0,0};
-		long res=0, ext=0, tmp=0;
+	long res=0, ext=0, tmp=0;
 		for(long i=0;i<n;i++)
 		{
 			if(t[i] == 1)
@@ -21,7 +17,6 @@ int main()
 				res+=a[i];
 			}
 		}
-		cout<<res<<endl;
 		for(int i=0;i<n-k;i++)
 		{
 			tmp=0;
@@ -31,7 +26,14 @@ int main()
 			}
 			ext=Max(ext,tmp);
 		}
-		cout<<ext<<endl;
-cout<<res+ext<<endl;
-return 0;
+	cout<<res+ext<<endl;
+}
+
+int main()
+{
+	long n=6,k=3;
+	vector<long> a={1,3,5,2,5,4};
+	vector<int> t={1,1,0,1,0,0};
+	sleepClass(a, t, n, k);
+	return 0;
 }

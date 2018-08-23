@@ -3,7 +3,7 @@
 #include <math.h>
 using namespace std;
 
-vector<vector<int>> subSets1(vector<int> nums)
+vector<vector<int> > subSets1(vector<int> nums)
 {
 	int n = nums.size();
 	int m = pow(2, n);
